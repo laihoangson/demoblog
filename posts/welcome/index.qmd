@@ -1,11 +1,14 @@
 ---
-title: "Welcome To My Blog Template"
-author: "Emi Tanaka"
-date: "2022-07-18"
-categories: [news]
+title: "Welcome to My Data Journey"
+author: "Hoang Son Lai"
+date: "2025-09-29"
+categories: [Welcome, Introduction]
+image: "thumbnail.jpg"
 ---
 
-This is the first post in a Quarto blog. Welcome!
+This is the beginning of my blog where I will be sharing my journey into the world of data analysis. I'll be documenting my learning process, projects I'm working on, and insights I gain along the way.
+
+I'm excited to connect with others in the data community. Let's learn and grow together!
 
 ![](thumbnail.jpg)
 

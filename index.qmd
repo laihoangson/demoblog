@@ -1,14 +1,13 @@
 ---
-title: "ETC5523 Blog Assessment"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
 page-layout: full
-title-block-banner: true
 ---
 
-
+```{=html}
+<div class="hero-banner">
+  <div class="hero-content">
+    <div class="hero-title">WELCOME</div>
+    <p>This is my personal journey into the world of data analysis. Let's enjoy the journey together.</p>
+    <a href="posts.qmd" class="hero-button">DIVE IN! </a>
+  </div>
+</div>
+```
