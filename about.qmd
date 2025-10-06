@@ -6,7 +6,7 @@ about:
   links:
     - icon: linkedin
       text: LinkedIn
-      href: www.linkedin.com/in/hoang-son-lai-92ab19282
+      href: https://linkedin.com/in/hoang-son-lai-92ab19282
     - icon: github
       text: GitHub
       href: https://github.com/laihoangson
