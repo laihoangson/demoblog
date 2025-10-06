@@ -5,9 +5,15 @@ page-layout: full
 ```{=html}
 <div class="hero-banner">
   <div class="hero-content">
-    <div class="hero-title">WELCOME</div>
-    <p>This is my personal journey into the world of data analysis. Let's enjoy the journey together.</p>
-    <a href="posts.qmd" class="hero-button">DIVE IN! </a>
+
+    <img src="home.jpg" alt="Welcome to my blog" class="hero-image">
+
+    <p>Hi, I am Hoang Son Lai.</p>
+
+    <p>Stepping into the world of data feels like exploring a new universe - full of patterns, surprises, and stories waiting to be told. Let's enjoy this journey together.</p>
+
+    <a href="posts.qmd" class="hero-button">EXPLORE MY BLOG >></a>
+
   </div>
 </div>
 ```

@@ -1,0 +1,78 @@
+/* --- Hero Banner Styling for the Home Page --- */
+
+/* Use the .page-index class to apply styles ONLY to the homepage */
+
+/* Make the navbar transparent on the homepage for a seamless look */
+.page-index .navbar {
+  background: transparent !important;
+  border-bottom: none;
+}
+
+/* Hide the default page header that Quarto creates */
+.page-index .page-header {
+  display: none !important;
+}
+
+/*   Force the main content area to have no padding/margins and take up the full screen.*/
+.page-index .container-fluid.main-container {
+  max-width: none !important; /* Override theme width restrictions */
+  padding: 0 !important;      /* Remove all padding */
+  margin: 0 !important;       /* Remove all margins */
+}
+
+/* The hero banner itself */
+.hero-banner {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100%;   /* Full width of its parent (which is now the full page) */
+
+
+  /* Use flexbox for perfect centering of the content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: steelblue;
+}
+
+/* The content inside the banner (text and button) */
+.hero-content {
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Styling for the new "WELCOME" title */
+.hero-content .hero-title {
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Styling for the text and button */
+.hero-content p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  background-color: #4aaaa5;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #3b8b86;
+  color: white;
+}
+
+/* Hide the title on the main blog listing page */
+body.page-listing h1.title {
+  display: none;
+}

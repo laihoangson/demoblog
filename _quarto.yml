@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Hoang Son Lai - Data Analyst"
+  title: "Hoang Son's Data Blog"
   navbar:
     left:
       - href: index.qmd
@@ -14,15 +14,15 @@ website:
         text: Blog
     right:
       - icon: github
-        href: https://github.com/yourusername
+        href: https://github.com/laihoangson
       - icon: linkedin
-        href: https://linkedin.com/in/yourprofile
+        href: https://linkedin.com/in/hoang-son-lai-92ab19282
       - icon: envelope
         href: mailto:hlai0022@student.monash.edu
 
 format:
   html:
-    theme: lumen
+    theme: flatly
     css: styles.css
 
 

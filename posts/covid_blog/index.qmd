@@ -1,0 +1,10 @@
+---
+title: "Welcome to My Data Journey"
+author: "Hoang Son Lai"
+date: "2025-09-29"
+categories: [Analysis, Covid]
+image: "airport.jpg"
+---
+
+![](airport.jpg)
+

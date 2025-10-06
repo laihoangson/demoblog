@@ -1,5 +1,5 @@
 ---
-title: "About Me"
+title: "Hoang Son Lai"
 image: profile.jpg
 about:
   template: trestles
@@ -12,30 +12,45 @@ about:
       href: https://github.com/laihoangson
 ---
 
-## Hoang Son Lai
+### About Me
 
 As a young professional early in my career, I understand there’s still much to learn - and I’m fully committed to that journey. With a strong academic foundation in finance and current postgraduate study in Business Analytics at Monash University, I’m working hard every day to develop both my technical and professional skills. I’ve gained valuable hands-on experience in finance, insurance, and data analysis, and I’m eager to keep improving through real-world challenges. I may be at the beginning, but I bring energy, adaptability, and a serious willingness to grow into every opportunity.
 
 ---
 
-### Education
+## Education
 
-**Monash University** | Melbourne, Australia |
-*Master's degree, Business Analytics* | Mar 2025 - Dec 2026
+**Monash University**  
 
-**Foreign Trade University** | Hanoi, Viet Nam |
-*Bachelor's degree, Banking and International Finance* | Sep 2020 - Aug 2024
+Master's degree, Business Analytics 
+
+Melbourne, Australia | Mar 2025 - Dec 2026
+
+**Foreign Trade University**  
+
+Bachelor's degree, Banking and International Finance
+
+Hanoi, Viet Nam | Sep 2020 - Aug 2024
 
 ---
 
-### Experience
+## Experience
 
-**BAOVIET INSURANCE** | Hanoi, Viet Nam |
-*Insurance Intern* | Oct 2024 - Dec 2024
+**Bao Viet Insurance Company**  
 
-**Shinhan Vietnam Finance Company** | Hanoi, Viet Nam |
-*Telesales Representative* | May 2024 - Sep 2024
+Insurance Intern
 
-**RSM Vietnam Company** | Hanoi, Viet Nam |
-*Audit Intern* | Jul 2023 - Aug 2023
+Hanoi, Viet Nam | Oct 2024 - Dec 2024
+
+**Shinhan Vietnam Finance Company**
+
+Telesales Representative
+
+Hanoi, Viet Nam | May 2024 - Sep 2024
+
+**RSM Vietnam Company**  
+
+Audit Intern
+
+Hanoi, Viet Nam | Jul 2023 - Aug 2023
 

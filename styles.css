@@ -1,63 +1,62 @@
 /* --- Hero Banner Styling for the Home Page --- */
 
-/* Use the .page-index class to apply styles ONLY to the homepage */
-
-/* Make the navbar transparent on the homepage for a seamless look */
+/* Make the navbar transparent */
 .page-index .navbar {
   background: transparent !important;
   border-bottom: none;
 }
 
-/* Hide the default page header that Quarto creates */
+/* Hide the default page header */
 .page-index .page-header {
   display: none !important;
 }
 
-/*   Force the main content area to have no padding/margins and take up the full screen.*/
+/* Force the main content area to remove all default spacing */
 .page-index .container-fluid.main-container {
-  max-width: none !important; /* Override theme width restrictions */
-  padding: 0 !important;      /* Remove all padding */
-  margin: 0 !important;       /* Remove all margins */
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 /* The hero banner itself */
 .hero-banner {
-  position: relative;
-  height: 100vh; /* Full viewport height */
-  width: 100%;   /* Full width of its parent (which is now the full page) */
-
-
-  /* Use flexbox for perfect centering of the content */
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: steelblue;
+  color: #003366;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
-/* The content inside the banner (text and button) */
+/* The content inside the banner */
 .hero-content {
   max-width: 800px;
-  padding: 20px;
 }
 
-/* Styling for the new "WELCOME" title */
-.hero-content .hero-title {
-  font-size: 5rem;
-  font-weight: 600;
-  letter-spacing: 0.2rem;
-  margin-bottom: 1rem;
+/* Styling for the hero image */
+.hero-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
 }
 
-/* Styling for the text and button */
+/* Styling for the paragraphs */
 .hero-content p {
   font-size: 1.25rem;
   font-weight: 300;
-  margin-bottom: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
+/* Styling for the button */
 .hero-button {
-  background-color: #4aaaa5;
+  background-color: #003366;
   color: white;
   padding: 15px 30px;
   text-decoration: none;
@@ -65,10 +64,12 @@
   font-weight: bold;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
 }
 
 .hero-button:hover {
-  background-color: #3b8b86;
+  background-color: #004488;
   color: white;
 }
 
