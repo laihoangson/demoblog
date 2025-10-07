@@ -8,7 +8,11 @@ page-layout: full
     <p class="hero-title">WELCOME TO MY BLOG</p>
     <p class="hero-intro">Hi, I am Hoang Son Lai.</p>
     <p>Stepping into the world of data feels like exploring a new universe - full of patterns, surprises, and stories waiting to be told. Let's enjoy this journey together.</p>
-    <a href="posts.qmd" class="hero-button">EXPLORE MY BLOG >></a>
+    <div class="button-container">
+      <a href="posts.qmd" class="hero-button">EXPLORE MY BLOG >></a>
+      <a href="about.qmd" class="hero-button hero-button--outline">ABOUT ME >></a>
+    </div>
+
   </div>
 </div>
 ```

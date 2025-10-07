@@ -25,11 +25,11 @@ body.page-index .navbar {
   background: transparent !important;
   border-bottom: none;
   transition: background-color 0.5s ease;
-  position: absolute; /* Take navbar out of document flow */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10; /* Ensure navbar is on top of other content */
+  z-index: 10;
 }
 
 /* Hide the default page header title */
@@ -39,15 +39,13 @@ body.page-index .page-header {
 
 /*
   The main hero banner container
-  --- KEY CHANGES HERE ---
-  Position the banner absolutely to force it to cover the entire screen.
 */
 .hero-banner {
   /* Positioning to cover the viewport */
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; /* Place it BEHIND the content and navbar */
+  z-index: -1;
 
   /* Background image settings */
   background-image: url('background.jpg');
@@ -74,7 +72,7 @@ body.page-index .page-header {
 
 /* Style for the main title */
 .hero-content .hero-title {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -95,6 +93,14 @@ body.page-index .page-header {
   margin-bottom: 2rem;
 }
 
+/* Button Container using Flexbox */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
 /* Style for the button */
 .hero-button {
   background-color: #0056b3;
@@ -112,6 +118,18 @@ body.page-index .page-header {
 }
 
 .hero-button:hover {
+  background-color: white;
+  color: #0056b3;
+}
+
+/* Style for the secondary "outline" button */
+.hero-button--outline {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Hover for the secondary button */
+.hero-button--outline:hover {
   background-color: white;
   color: #0056b3;
 }

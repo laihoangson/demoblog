@@ -19,6 +19,9 @@ website:
         href: https://linkedin.com/in/hoang-son-lai-92ab19282
       - icon: envelope
         href: mailto:hlai0022@student.monash.edu
+  page-footer:
+    left: "© 2025 Hoang Son Lai"
+    right: "Built with Quarto"
 
 format:
   html:
