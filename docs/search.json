@@ -16,9 +16,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Hoang Son Lai",
     "section": "",
-    "text": "This is a blog template for the ETC5523 Communicating with Data assessment at Monash University."
+    "text": "As a young professional early in my career, I understand there is still much to learn - and I am fully committed to that journey. With a strong academic foundation in finance and current postgraduate study in Business Analytics at Monash University, I am working hard every day to develop both my technical and professional skills. I have gained valuable hands-on experience in finance, insurance, and data analysis, and I am eager to keep improving through real-world challenges. I may be at the beginning, but I bring energy, adaptability, and a serious willingness to grow into every opportunity."
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -26,5 +26,19 @@
     "title": "Welcome To My Blog Template",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Hoang Son Lai",
+    "section": "Education",
+    "text": "Education\nMonash University\nMaster’s degree, Business Analytics\nMelbourne, Australia | Mar 2025 - Dec 2026\nForeign Trade University\nBachelor’s degree, Banking and International Finance\nHanoi, Viet Nam | Sep 2020 - Aug 2024"
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "Hoang Son Lai",
+    "section": "Experience",
+    "text": "Experience\nBao Viet Insurance Company\nInsurance Intern\nHanoi, Viet Nam | Oct 2024 - Dec 2024\nShinhan Vietnam Finance Company\nTelesales Representative\nHanoi, Viet Nam | May 2024 - Sep 2024\nRSM Vietnam Company\nAudit Intern\nHanoi, Viet Nam | Jul 2023 - Aug 2023"
   }
 ]

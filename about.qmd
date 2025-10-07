@@ -1,13 +1,55 @@
 ---
-title: "About"
+title: "Hoang Son Lai"
 image: profile.jpg
 about:
-  template: jolla
+  template: trestles
   links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/hoang-son-lai-92ab19282
     - icon: github
-      text: Github
-      href: https://github.com/etc5523-2022
+      text: GitHub
+      href: https://github.com/laihoangson
+---
+
+### About Me
+
+As a young professional early in my career, I understand there is still much to learn - and I am fully committed to that journey. With a strong academic foundation in finance and current postgraduate study in Business Analytics at Monash University, I am working hard every day to develop both my technical and professional skills. I have gained valuable hands-on experience in finance, insurance, and data analysis, and I am eager to keep improving through real-world challenges. I may be at the beginning, but I bring energy, adaptability, and a serious willingness to grow into every opportunity.
 
 ---
 
-This is a blog template for the ETC5523 Communicating with Data assessment at Monash University.
+## Education
+
+**Monash University**  
+
+*Master's degree, Business Analytics*
+
+Melbourne, Australia | Mar 2025 - Dec 2026
+
+**Foreign Trade University**  
+
+*Bachelor's degree, Banking and International Finance*
+
+Hanoi, Viet Nam | Sep 2020 - Aug 2024
+
+---
+
+## Experience
+
+**Bao Viet Insurance Company**  
+
+*Insurance Intern*
+
+Hanoi, Viet Nam | Oct 2024 - Dec 2024
+
+**Shinhan Vietnam Finance Company**
+
+*Telesales Representative*
+
+Hanoi, Viet Nam | May 2024 - Sep 2024
+
+**RSM Vietnam Company**  
+
+*Audit Intern*
+
+Hanoi, Viet Nam | Jul 2023 - Aug 2023
