@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/covid_blog/index.html",
       "/posts/welcome/index.html"
     ]
   }

@@ -1,0 +1,9 @@
+---
+title: "The Shifting Sands of Safety: How the Delta Variant Challenged COVID-19 Border Quarantine"
+author: "Hoang Son Lai"
+date: "2025-10-07"
+categories: [Analysis, Covid]
+image: "airport.jpg"
+---
+
+![](airport.jpg)
