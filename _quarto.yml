@@ -3,12 +3,22 @@ project:
   output-dir: docs
 
 website:
-  title: "blog-template"
+  title: "Hoang Son's Data Blog"
   navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: posts.qmd
+        text: Blog
     right:
-      - about.qmd
       - icon: github
-        href: https://github.com/etc5523-2022
+        href: https://github.com/laihoangson
+      - icon: linkedin
+        href: https://linkedin.com/in/hoang-son-lai-92ab19282
+      - icon: envelope
+        href: mailto:hlai0022@student.monash.edu
 format:
   html:
     theme: cosmo
