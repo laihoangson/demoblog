@@ -1,4 +1,140 @@
-/* css styles */
-.navbar-dark, .quarto-title-banner {
-  background-color: #006DAE;
+/* Hero Banner Styling for the Home Page */
+
+/* Reset all margin and padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+  Force the main content container on the homepage to have no padding or restrictions.
+*/
+body.page-index .quarto-container.page-columns.page-layout-full .quarto-margin-sidebar,
+body.page-index .quarto-container.page-columns.page-layout-full .quarto-content {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+}
+
+/*
+  Make the navbar on the homepage transparent and position it OVER the banner.
+*/
+body.page-index .navbar {
+  background: transparent !important;
+  border-bottom: none;
+  transition: background-color 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Hide the default page header title */
+body.page-index .page-header {
+  display: none !important;
+}
+
+/*
+  The main hero banner container
+*/
+.hero-banner {
+  /* Positioning to cover the viewport */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  /* Background image settings */
+  background-image: url('background.jpg');
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Flexbox to center the content vertically and horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* The content block inside the banner */
+.hero-content {
+  max-width: 800px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  padding: 0 1rem;
+}
+
+/* Style for the main title */
+.hero-content .hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Style for the intro line to reduce bottom margin */
+.hero-content .hero-intro {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* Style for the main paragraph */
+.hero-content p:not(.hero-title):not(.hero-intro) {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Button Container using Flexbox */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Style for the button */
+.hero-button {
+  background-color: #0056b3;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-top: 1rem;
+}
+
+.hero-button:hover {
+  background-color: white;
+  color: #0056b3;
+}
+
+/* Style for the secondary "outline" button */
+.hero-button--outline {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Hover for the secondary button */
+.hero-button--outline:hover {
+  background-color: white;
+  color: #0056b3;
+}
+
+/* Hide the title on the main blog listing page */
+body.page-listing h1.title {
+  display: none;
 }

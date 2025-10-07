@@ -1,14 +1,19 @@
 ---
-title: "ETC5523 Blog Assessment"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
 page-layout: full
-title-block-banner: true
 ---
 
+```{=html}
+<div class="hero-banner">
+  <div class="hero-content">
+    <p class="hero-title">WELCOME TO MY BLOG</p>
+    <p class="hero-intro">Hi, I am Hoang Son Lai.</p>
+    <p>Stepping into the world of data feels like exploring a new universe - full of patterns, surprises, and stories waiting to be told. Let's enjoy this journey together.</p>
+    <div class="button-container">
+      <a href="posts.qmd" class="hero-button">EXPLORE MY BLOG >></a>
+      <a href="about.qmd" class="hero-button hero-button--outline">ABOUT ME >></a>
+    </div>
+
+  </div>
+</div>
+```
 
