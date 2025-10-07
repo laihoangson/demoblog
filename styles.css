@@ -138,3 +138,29 @@ body.page-index .page-header {
 body.page-listing h1.title {
   display: none;
 }
+
+/*
+  STYLING FOR ABOUT PAGE (trestles template)
+*/
+
+/* Create the blue background card for the parent container. */
+.quarto-about-trestles .about-entity {
+  background-color: #eaf2ff !important;
+  /* border-radius: 25px !important; <-- REMOVED */
+  padding: 2.5rem !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08) !important;
+}
+
+/*Make the background of the child columns transparent
+  to reveal the blue background of the parent.*/
+.quarto-about-trestles .about-left,
+.quarto-about-trestles .about-contents {
+  background: none !important;
+  border: none !important;
+}
+
+/* Turn the subheadings blue. */
+.quarto-about-trestles .about-contents h2,
+.quarto-about-trestles .about-contents h3 {
+  color: #0056b3 !important;
+}

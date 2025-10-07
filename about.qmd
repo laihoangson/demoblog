@@ -18,7 +18,7 @@ I am Hoang Son Lai, a motivated individual with a strong academic background in 
 
 ---
 
-## Education
+### Education
 
 **Monash University**  
 
@@ -34,7 +34,7 @@ Hanoi, Viet Nam | Sep 2020 - Aug 2024
 
 ---
 
-## Experience
+### Experience
 
 **Bao Viet Insurance Company**  
 
@@ -53,3 +53,39 @@ Hanoi, Viet Nam | May 2024 - Sep 2024
 *Audit Intern*
 
 Hanoi, Viet Nam | Jul 2023 - Aug 2023
+
+```{=html}
+<style>
+  .quarto-about-trestles .about-left,
+  .quarto-about-trestles .about-contents {
+    background-color: #eaf2ff !important; 
+  }
+  
+  .quarto-about-trestles .about-entity {
+    padding: 0 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08) !important;
+  }
+  
+  .quarto-about-trestles .about-left > .about-image,
+  .quarto-about-trestles .about-left > .about-name,
+  .quarto-about-trestles .about-left > .about-links,
+  .quarto-about-trestles .about-contents {
+      padding: 2.5rem !important;
+  }
+
+  .quarto-about-trestles .about-image img {
+    border-radius: 50% !important;
+    width: 220px !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    border: 6px solid white !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1) !important;
+  }
+
+  .quarto-about-trestles .about-name,
+  .quarto-about-trestles .about-contents h3,
+  .quarto-about-trestles .about-contents h2 {
+    color: #0056b3 !important;
+  }
+</style>
+```
