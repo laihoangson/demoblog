@@ -4,7 +4,7 @@
     "href": "posts.html",
     "title": "Hoang Son's Data Blog",
     "section": "",
-    "text": "Welcome To My Blog Template\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 18, 2022\n\n\nEmi Tanaka\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to My Data Journey\n\n\n\n\n\n\nWelcome\n\n\nIntroduction\n\n\n\n\n\n\n\n\n\nOct 7, 2025\n\n\nHoang Son Lai\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -37,8 +37,8 @@
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog Template",
+    "title": "Welcome to My Data Journey",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!"
+    "text": "This is the beginning of my blog where I will be sharing my journey into the world of data analysis. I’ll be documenting my learning process, projects I’m working on, and insights I gain along the way.\nI’m excited to connect with others in the data community. Let’s learn and grow together!"
   }
 ]
