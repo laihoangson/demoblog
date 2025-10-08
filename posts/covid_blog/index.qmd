@@ -7,10 +7,20 @@ image: "airport.jpg"
 format: 
  html:
   toc: true
-  toc-depth: 4
 ---
 
-![](airport.jpg)
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+#| out-width: "100%"
+#| out-height: "auto"
+
+library(knitr)
+
+knitr::include_graphics("airport.jpg")
+```
 
 When COVID-19 emerged, countries like Australia, New Zealand, and China implemented strict border quarantine systems to prevent local outbreaks. These systems required international travelers to undergo 14-day quarantine periods with regular testing. However, the emergence of the Delta variant in 2021 posed new challenges - it was significantly more transmissible and partially evaded vaccine-induced immunity. This raised critical questions: 
 
@@ -18,7 +28,7 @@ When COVID-19 emerged, countries like Australia, New Zealand, and China implemen
 
 This blog post explores how border quarantine performance changed under Delta variant conditions and what level of vaccination was needed to maintain safety.
 
-### Modeling Approach and Data Sources
+## Modeling Approach and Data Sources
 
 This analysis is based on the findings from the research article "COVID-19 in low-tolerance border quarantine systems: Impact of the Delta variant of SARS-CoV-2" by Zachreson et al., published in *Science Advances* on April 8, 2022. These researchers developed sophisticated mathematical models to answer the question. They created an individual-based model simulating COVID-19 transmission within quarantine facilities, combined with a branching process model to assess community transmission risk. The models incorporated real-world parameters from Australian and New Zealand quarantine systems, including:
 
@@ -26,7 +36,7 @@ This analysis is based on the findings from the research article "COVID-19 in lo
 - Infection control measures reducing transmission between groups
 - Vaccination effects on both infection susceptibility and transmission
 
-### The Impact of Increased Transmissibility and Vaccination
+## The Impact of Increased Transmissibility and Vaccination
 
 The heatmap below shows how the relative risk of quarantine breaches changes with different combinations of viral transmissibility (R₀) and vaccine efficacy:
 
@@ -46,7 +56,7 @@ knitr::include_graphics("figure.jpg")
 
 @fig-one demonstrates a crucial finding: as viral transmissibility increases (higher R₀), vaccine efficacy must also increase to maintain the same level of protection. The contour lines show that to keep risk at baseline levels (comparable to pre-Delta conditions with R₀=3 and no vaccines), vaccine efficacy needed to exceed 60% for R₀=6 and 70% for R₀=8. This explains why countries with previously effective quarantine systems faced challenges when Delta emerged - the existing level of vaccine protection was insufficient against the variant's increased transmissibility.
 
-### Outbreak Timing Under Different Vaccination Scenarios
+## Outbreak Timing Under Different Vaccination Scenarios
 
 Based on Figure 4 from the research by Zachreson et al. (2022), the table below shows how long it takes to reach 50% probability of a community outbreak under different Delta variant conditions:
 
@@ -129,7 +139,7 @@ The most remarkable finding is the powerful threshold effect observed with high-
 
 The analysis also underscores that vaccination within quarantine systems alone was insufficient - high community vaccination rates were equally vital. As emphasized in the research, "border quarantine systems cannot be used to compensate for low levels of community vaccination" [Zachreson et al. (2022)]. This finding had profound policy implications, demonstrating that safely reopening borders required a comprehensive dual approach: ensuring high vaccination coverage among both international travelers and the general population to achieve meaningful community protection.
 
-### Conclusion
+## Conclusion
 
 The emergence of the Delta variant fundamentally changed the risk calculus for border quarantine systems. Where previously strict quarantine alone could prevent outbreaks, the variant's increased transmissibility meant that vaccination became an essential component of border safety. The key findings from this analysis include:
 
@@ -143,6 +153,6 @@ The emergence of the Delta variant fundamentally changed the risk calculus for b
 
 As Zachreson et al. (2022) conclude, the experience with Delta demonstrates that pandemic border policies must be adaptive, responding to changes in viral characteristics and vaccine effectiveness. This research provides a framework for evaluating future variants and determining appropriate border measures based on their transmissibility and immune evasion capabilities.
 
-### Reference
+## Reference
 
 Zachreson, C., Shearer, F. M., Price, D. J., Lydeamore, M. J., McVernon, J., McCaw, J., & Geard, N. (2022). COVID-19 in low-tolerance border quarantine systems: Impact of the Delta variant of SARS-CoV-2. *Science Advances, 8*(15), eabm3624. <https://doi.org/10.1126/sciadv.abm3624>
