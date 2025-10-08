@@ -202,8 +202,29 @@ window.Quarto = {
 
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+</div>
 <div class="list grid quarto-listing-cols-1">
-<div class="g-col-1" data-index="0" data-categories="QW5hbHlzaXMlMkNDb3ZpZA==" data-listing-date-sort="1759755600000" data-listing-file-modified-sort="1759823173055" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="g-col-1" data-index="0" data-categories="QW5hbHlzaXMlMkNDb3ZpZA==" data-listing-date-sort="1759842000000" data-listing-file-modified-sort="1759894818774" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1435">
 <a href="./posts/covid_blog/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -211,7 +232,7 @@ window.Quarto = {
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-The Shifting Sands of Safety: How the Delta Variant Challenged COVID-19 Border Quarantine
+How Vaccination and Virus Evolution Reshape Border Quarantine Effectiveness
 </h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('QW5hbHlzaXM='); return false;">
@@ -222,14 +243,14 @@ Covid
 </div>
 </div>
 <div class="card-text listing-description">
-
+When COVID-19 emerged, countries like Australia, New Zealand, and China implemented strict border quarantine systems to prevent local outbreaks. These systems required…
 </div>
 <div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Hoang Son Lai
 </div>
 <div class="listing-date">
-Oct 7, 2025
+Oct 8, 2025
 </div>
 </div>
 </div>

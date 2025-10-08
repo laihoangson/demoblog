@@ -1,9 +1,148 @@
 ---
-title: "The Shifting Sands of Safety: How the Delta Variant Challenged COVID-19 Border Quarantine"
+title: "How Vaccination and Virus Evolution Reshape Border Quarantine Effectiveness"
 author: "Hoang Son Lai"
-date: "2025-10-07"
+date: "2025-10-08"
 categories: [Analysis, Covid]
 image: "airport.jpg"
+format: 
+ html:
+  toc: true
+  toc-depth: 4
 ---
 
 ![](airport.jpg)
+
+When COVID-19 emerged, countries like Australia, New Zealand, and China implemented strict border quarantine systems to prevent local outbreaks. These systems required international travelers to undergo 14-day quarantine periods with regular testing. However, the emergence of the Delta variant in 2021 posed new challenges - it was significantly more transmissible and partially evaded vaccine-induced immunity. This raised critical questions: 
+
+> *Could existing quarantine systems containing this more dangerous variant? How effective were vaccines at preventing outbreaks when breakthrough infections occurred?*
+
+This blog post explores how border quarantine performance changed under Delta variant conditions and what level of vaccination was needed to maintain safety.
+
+### Modeling Approach and Data Sources
+
+This analysis is based on the findings from the research article "COVID-19 in low-tolerance border quarantine systems: Impact of the Delta variant of SARS-CoV-2" by Zachreson et al., published in *Science Advances* on April 8, 2022. These researchers developed sophisticated mathematical models to answer the question. They created an individual-based model simulating COVID-19 transmission within quarantine facilities, combined with a branching process model to assess community transmission risk. The models incorporated real-world parameters from Australian and New Zealand quarantine systems, including:
+
+- 14-day quarantine stays with testing on days 3 and 12
+- Infection control measures reducing transmission between groups
+- Vaccination effects on both infection susceptibility and transmission
+
+### The Impact of Increased Transmissibility and Vaccination
+
+The heatmap below shows how the relative risk of quarantine breaches changes with different combinations of viral transmissibility (R₀) and vaccine efficacy:
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-one
+#| fig-cap: "Integrated force of infection relative to baseline from simulated quarantine breach events. The heatmap demonstrates how the relative force of infection produced by quarantine breach events scales with vaccine efficacy (VE) and the basic reproductive ratio of the virus (R₀). The dotted blue box represents plausible values for the baseline condition. The green dotted box represents scenarios corresponding to vaccinated quarantine pathways before the emergence of the Delta variant. The yellow dashed box covers a range of values plausible for Delta variant scenarios. (Source: Zachreson et al., 2022)"
+#| out-width: "100%"
+#| out-height: "auto"
+
+library(knitr)
+
+knitr::include_graphics("figure.jpg")
+```
+
+@fig-one demonstrates a crucial finding: as viral transmissibility increases (higher R₀), vaccine efficacy must also increase to maintain the same level of protection. The contour lines show that to keep risk at baseline levels (comparable to pre-Delta conditions with R₀=3 and no vaccines), vaccine efficacy needed to exceed 60% for R₀=6 and 70% for R₀=8. This explains why countries with previously effective quarantine systems faced challenges when Delta emerged - the existing level of vaccine protection was insufficient against the variant's increased transmissibility.
+
+### Outbreak Timing Under Different Vaccination Scenarios
+
+Based on Figure 4 from the research by Zachreson et al. (2022), the table below shows how long it takes to reach 50% probability of a community outbreak under different Delta variant conditions:
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-one
+#| tbl-cap: "Community Outbreak Risk from Quarantine Breaches. Estimated time until the probability of a community outbreak (≥5 cases) reaches 50%"
+
+library(gt)
+library(tibble)
+library(dplyr)
+
+# Create the tibble with the most carefully extracted data from Figure 4
+accurate_data <- tribble(
+  ~Group,      ~VE,  ~cov_20, ~cov_60, ~cov_100,
+  "Baseline (R₀=3, VE=0%)", "—",  15,      15,       15,
+  "R₀ = 6",     "50%",            25,      30,       35,
+  "R₀ = 6",     "70%",            60,      80,      120,
+  "R₀ = 6",     "90%",           450,     800,     2000,
+  "R₀ = 7",     "50%",            20,      25,       30,
+  "R₀ = 7",     "70%",            50,      65,      100,
+  "R₀ = 7",     "90%",           300,     600,     1500,
+  "R₀ = 8",     "50%",            18,      20,       22,
+  "R₀ = 8",     "70%",            40,      50,       80,
+  "R₀ = 8",     "90%",           300,     450,     1000
+)
+
+# Create the gt table
+final_gt_table_styled <- gt(accurate_data, groupname_col = "Group") %>%
+  tab_spanner(
+    label = md("**Population Vaccine Coverage**"),
+    columns = c(cov_20, cov_60, cov_100)
+  ) %>%
+  cols_label(
+    VE = md("**Vaccine Efficacy**"),
+    cov_20 = md("**20%**"),
+    cov_60 = md("**60%**"),
+    cov_100 = md("**100%**")
+  ) %>%
+  fmt_number(
+    columns = c(cov_20, cov_60, cov_100),
+    decimals = 0,
+    use_seps = TRUE,
+    pattern = "~{x}" 
+  )  %>%
+  cols_align(
+    align = "center",
+    columns = everything()
+  ) %>%
+  tab_style(
+    style = list(
+      cell_fill(color = "#0072B2"), 
+      cell_text(color = "white", weight = "bold")
+    ),
+    locations = list(
+      cells_column_labels(columns = everything()),
+      cells_column_spanners(spanners = everything()),
+      cells_row_groups()
+    )
+  ) %>%
+  tab_source_note(
+    source_note = md("Source: Data extracted from Zachreson et al. (2022), *Science Advances*, Figure 4.")
+  ) %>%
+  opt_table_font(
+    font = list(
+      google_font(name = "Lato"),
+      "sans-serif"
+    )
+  )
+
+# Display the final, styled table
+final_gt_table_styled
+```
+
+@tbl-one reveals several critical insights about border quarantine during the Delta wave. The data demonstrates an exponential relationship between vaccine efficacy and outbreak protection. While 50% efficacy vaccines provided only modest improvements (extending outbreak timelines from 15 to 22-35 days), 90% efficacy vaccines created dramatic protection, extending the timeframe to 1,000-2,000 days at full population coverage.
+
+The most striking finding is the threshold effect observed with high-efficacy vaccines. At 90% efficacy, each increase in population coverage produces disproportionately larger gains in protection. For R₀ = 6, moving from 20% to 100% coverage extends the outbreak timeline from 450 to 2,000 days, a more than fourfold increase.
+
+The analysis also highlights that vaccination within quarantine systems alone was insufficient - high community vaccination rates were equally important. As noted in the research, "border quarantine systems cannot be used to compensate for low levels of community vaccination" [Zachreson et al. (2022)]. This finding had significant policy implications, suggesting that reopening borders safely required a dual approach: vaccinating both travelers and the general population.
+
+### Conclusion
+
+The emergence of the Delta variant fundamentally changed the risk calculus for border quarantine systems. Where previously strict quarantine alone could prevent outbreaks, the variant's increased transmissibility meant that vaccination became an essential component of border safety. The key findings from this analysis include:
+
+1. Vaccine efficacy thresholds are critical: Low-efficacy vaccines (50%) provided minimal protection, while high-efficacy vaccines (90%) could extend outbreak protection by two orders of magnitude.
+
+2. Population coverage creates exponential benefits: The protective effect of high-efficacy vaccines increases dramatically with higher population vaccination rates, showing clear threshold behavior.
+
+3. Dual protection is essential: High vaccination rates both within quarantine systems and in the general population were necessary to prevent outbreaks effectively.
+
+4. Adaptive policies are required: Border measures must evolve with changing viral characteristics and vaccine effectiveness.
+
+As Zachreson et al. (2022) conclude, the experience with Delta demonstrates that pandemic border policies must be adaptive, responding to changes in viral characteristics and vaccine effectiveness. This research provides a framework for evaluating future variants and determining appropriate border measures based on their transmissibility and immune evasion capabilities.
+
+### Reference
+
+Zachreson, C., Shearer, F. M., Price, D. J., Lydeamore, M. J., McVernon, J., McCaw, J., & Geard, N. (2022). COVID-19 in low-tolerance border quarantine systems: Impact of the Delta variant of SARS-CoV-2. *Science Advances, 8*(15), eabm3624. <https://doi.org/10.1126/sciadv.abm3624>

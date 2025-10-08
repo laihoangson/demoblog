@@ -6,7 +6,7 @@ listing:
   type: grid
   grid-columns: 1
   categories: true
-  sort-ui: false
+  sort-ui: true
   filter-ui: false
 page-layout: full
 title-block-banner: false

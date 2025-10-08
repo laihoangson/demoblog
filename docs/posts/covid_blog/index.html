@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hoang Son Lai">
-<meta name="dcterms.date" content="2025-10-07">
+<meta name="dcterms.date" content="2025-10-08">
 
-<title>The Shifting Sands of Safety: How the Delta Variant Challenged COVID-19 Border Quarantine – Hoang Son’s Data Blog</title>
+<title>How Vaccination and Virus Evolution Reshape Border Quarantine Effectiveness – Hoang Son’s Data Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -130,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">The Shifting Sands of Safety: How the Delta Variant Challenged COVID-19 Border Quarantine</h1>
+      <h1 class="title">How Vaccination and Virus Evolution Reshape Border Quarantine Effectiveness</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Analysis</div>
                 <div class="quarto-category">Covid</div>
@@ -151,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 7, 2025</p>
+        <p class="date">October 8, 2025</p>
       </div>
     </div>
     
@@ -162,7 +162,19 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#modeling-approach-and-data-sources" id="toc-modeling-approach-and-data-sources" class="nav-link active" data-scroll-target="#modeling-approach-and-data-sources">Modeling Approach and Data Sources</a></li>
+  <li><a href="#the-impact-of-increased-transmissibility-and-vaccination" id="toc-the-impact-of-increased-transmissibility-and-vaccination" class="nav-link" data-scroll-target="#the-impact-of-increased-transmissibility-and-vaccination">The Impact of Increased Transmissibility and Vaccination</a></li>
+  <li><a href="#outbreak-timing-under-different-vaccination-scenarios" id="toc-outbreak-timing-under-different-vaccination-scenarios" class="nav-link" data-scroll-target="#outbreak-timing-under-different-vaccination-scenarios">Outbreak Timing Under Different Vaccination Scenarios</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -171,8 +183,629 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><img src="airport.jpg" class="img-fluid"></p>
+<p>When COVID-19 emerged, countries like Australia, New Zealand, and China implemented strict border quarantine systems to prevent local outbreaks. These systems required international travelers to undergo 14-day quarantine periods with regular testing. However, the emergence of the Delta variant in 2021 posed new challenges - it was significantly more transmissible and partially evaded vaccine-induced immunity. This raised critical questions:</p>
+<blockquote class="blockquote">
+<p><em>Could existing quarantine systems containing this more dangerous variant? How effective were vaccines at preventing outbreaks when breakthrough infections occurred?</em></p>
+</blockquote>
+<p>This blog post explores how border quarantine performance changed under Delta variant conditions and what level of vaccination was needed to maintain safety.</p>
+<section id="modeling-approach-and-data-sources" class="level3">
+<h3 class="anchored" data-anchor-id="modeling-approach-and-data-sources">Modeling Approach and Data Sources</h3>
+<p>This analysis is based on the findings from the research article “COVID-19 in low-tolerance border quarantine systems: Impact of the Delta variant of SARS-CoV-2” by Zachreson et al., published in <em>Science Advances</em> on April 8, 2022. These researchers developed sophisticated mathematical models to answer the question. They created an individual-based model simulating COVID-19 transmission within quarantine facilities, combined with a branching process model to assess community transmission risk. The models incorporated real-world parameters from Australian and New Zealand quarantine systems, including:</p>
+<ul>
+<li>14-day quarantine stays with testing on days 3 and 12</li>
+<li>Infection control measures reducing transmission between groups</li>
+<li>Vaccination effects on both infection susceptibility and transmission</li>
+</ul>
+</section>
+<section id="the-impact-of-increased-transmissibility-and-vaccination" class="level3">
+<h3 class="anchored" data-anchor-id="the-impact-of-increased-transmissibility-and-vaccination">The Impact of Increased Transmissibility and Vaccination</h3>
+<p>The heatmap below shows how the relative risk of quarantine breaches changes with different combinations of viral transmissibility (R₀) and vaccine efficacy:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-one" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figure.jpg" style="width:100.0%" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Integrated force of infection relative to baseline from simulated quarantine breach events. The heatmap demonstrates how the relative force of infection produced by quarantine breach events scales with vaccine efficacy (VE) and the basic reproductive ratio of the virus (R₀). The dotted blue box represents plausible values for the baseline condition. The green dotted box represents scenarios corresponding to vaccinated quarantine pathways before the emergence of the Delta variant. The yellow dashed box covers a range of values plausible for Delta variant scenarios. (Source: Zachreson et al., 2022)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><a href="#fig-one" class="quarto-xref">Figure&nbsp;1</a> demonstrates a crucial finding: as viral transmissibility increases (higher R₀), vaccine efficacy must also increase to maintain the same level of protection. The contour lines show that to keep risk at baseline levels (comparable to pre-Delta conditions with R₀=3 and no vaccines), vaccine efficacy needed to exceed 60% for R₀=6 and 70% for R₀=8. This explains why countries with previously effective quarantine systems faced challenges when Delta emerged - the existing level of vaccine protection was insufficient against the variant’s increased transmissibility.</p>
+</section>
+<section id="outbreak-timing-under-different-vaccination-scenarios" class="level3">
+<h3 class="anchored" data-anchor-id="outbreak-timing-under-different-vaccination-scenarios">Outbreak Timing Under Different Vaccination Scenarios</h3>
+<p>Based on Figure 4 from the research by Zachreson et al.&nbsp;(2022), the table below shows how long it takes to reach 50% probability of a community outbreak under different Delta variant conditions:</p>
+<div class="cell">
+<div id="tbl-one" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Community Outbreak Risk from Quarantine Breaches. Estimated time until the probability of a community outbreak (≥5 cases) reaches 50%
+</figcaption>
+<div aria-describedby="tbl-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div id="kneuqprnzr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#kneuqprnzr table {
+  font-family: Lato, sans-serif, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#kneuqprnzr thead, #kneuqprnzr tbody, #kneuqprnzr tfoot, #kneuqprnzr tr, #kneuqprnzr td, #kneuqprnzr th {
+  border-style: none;
+}
+
+#kneuqprnzr p {
+  margin: 0;
+  padding: 0;
+}
+
+#kneuqprnzr .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#kneuqprnzr .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#kneuqprnzr .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#kneuqprnzr .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#kneuqprnzr .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#kneuqprnzr .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kneuqprnzr .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#kneuqprnzr .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#kneuqprnzr .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#kneuqprnzr .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#kneuqprnzr .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#kneuqprnzr .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#kneuqprnzr .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#kneuqprnzr .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#kneuqprnzr .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#kneuqprnzr .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#kneuqprnzr .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#kneuqprnzr .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#kneuqprnzr .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kneuqprnzr .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#kneuqprnzr .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#kneuqprnzr .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#kneuqprnzr .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kneuqprnzr .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#kneuqprnzr .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#kneuqprnzr .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kneuqprnzr .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kneuqprnzr .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#kneuqprnzr .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kneuqprnzr .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#kneuqprnzr .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kneuqprnzr .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#kneuqprnzr .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kneuqprnzr .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#kneuqprnzr .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kneuqprnzr .gt_left {
+  text-align: left;
+}
+
+#kneuqprnzr .gt_center {
+  text-align: center;
+}
+
+#kneuqprnzr .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#kneuqprnzr .gt_font_normal {
+  font-weight: normal;
+}
+
+#kneuqprnzr .gt_font_bold {
+  font-weight: bold;
+}
+
+#kneuqprnzr .gt_font_italic {
+  font-style: italic;
+}
+
+#kneuqprnzr .gt_super {
+  font-size: 65%;
+}
+
+#kneuqprnzr .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#kneuqprnzr .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#kneuqprnzr .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#kneuqprnzr .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#kneuqprnzr .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#kneuqprnzr .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#kneuqprnzr .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#kneuqprnzr .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#kneuqprnzr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="gt_col_headings gt_spanner_row header">
+<th rowspan="2" id="VE" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #0072B2; color: #FFFFFF; font-weight: bold" scope="col"><strong>Vaccine Efficacy</strong></th>
+<th colspan="3" id="**Population Vaccine Coverage**" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" style="background-color: #0072B2; color: #FFFFFF; font-weight: bold" scope="colgroup"><div class="gt_column_spanner">
+<strong>Population Vaccine Coverage</strong>
+</div></th>
+</tr>
+<tr class="gt_col_headings even">
+<th id="cov_20" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #0072B2; color: #FFFFFF; font-weight: bold" scope="col"><strong>20%</strong></th>
+<th id="cov_60" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #0072B2; color: #FFFFFF; font-weight: bold" scope="col"><strong>60%</strong></th>
+<th id="cov_100" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #0072B2; color: #FFFFFF; font-weight: bold" scope="col"><strong>100%</strong></th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="gt_group_heading_row odd">
+<td colspan="4" id="Baseline (R₀=3, VE=0%)" class="gt_group_heading" data-quarto-table-cell-role="th" style="background-color: #0072B2; color: #FFFFFF; font-weight: bold" scope="colgroup">Baseline (R₀=3, VE=0%)</td>
+</tr>
+<tr class="gt_row_group_first even">
+<td class="gt_row gt_center" headers="Baseline (R₀=3, VE=0%)  VE">—</td>
+<td class="gt_row gt_center" headers="Baseline (R₀=3, VE=0%)  cov_20">~15</td>
+<td class="gt_row gt_center" headers="Baseline (R₀=3, VE=0%)  cov_60">~15</td>
+<td class="gt_row gt_center" headers="Baseline (R₀=3, VE=0%)  cov_100">~15</td>
+</tr>
+<tr class="gt_group_heading_row odd">
+<td colspan="4" id="R₀ = 6" class="gt_group_heading" data-quarto-table-cell-role="th" style="background-color: #0072B2; color: #FFFFFF; font-weight: bold" scope="colgroup">R₀ = 6</td>
+</tr>
+<tr class="gt_row_group_first even">
+<td class="gt_row gt_center" headers="R₀ = 6  VE">50%</td>
+<td class="gt_row gt_center" headers="R₀ = 6  cov_20">~25</td>
+<td class="gt_row gt_center" headers="R₀ = 6  cov_60">~30</td>
+<td class="gt_row gt_center" headers="R₀ = 6  cov_100">~35</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="R₀ = 6  VE">70%</td>
+<td class="gt_row gt_center" headers="R₀ = 6  cov_20">~60</td>
+<td class="gt_row gt_center" headers="R₀ = 6  cov_60">~80</td>
+<td class="gt_row gt_center" headers="R₀ = 6  cov_100">~120</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="R₀ = 6  VE">90%</td>
+<td class="gt_row gt_center" headers="R₀ = 6  cov_20">~450</td>
+<td class="gt_row gt_center" headers="R₀ = 6  cov_60">~800</td>
+<td class="gt_row gt_center" headers="R₀ = 6  cov_100">~2,000</td>
+</tr>
+<tr class="gt_group_heading_row odd">
+<td colspan="4" id="R₀ = 7" class="gt_group_heading" data-quarto-table-cell-role="th" style="background-color: #0072B2; color: #FFFFFF; font-weight: bold" scope="colgroup">R₀ = 7</td>
+</tr>
+<tr class="gt_row_group_first even">
+<td class="gt_row gt_center" headers="R₀ = 7  VE">50%</td>
+<td class="gt_row gt_center" headers="R₀ = 7  cov_20">~20</td>
+<td class="gt_row gt_center" headers="R₀ = 7  cov_60">~25</td>
+<td class="gt_row gt_center" headers="R₀ = 7  cov_100">~30</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="R₀ = 7  VE">70%</td>
+<td class="gt_row gt_center" headers="R₀ = 7  cov_20">~50</td>
+<td class="gt_row gt_center" headers="R₀ = 7  cov_60">~65</td>
+<td class="gt_row gt_center" headers="R₀ = 7  cov_100">~100</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="R₀ = 7  VE">90%</td>
+<td class="gt_row gt_center" headers="R₀ = 7  cov_20">~300</td>
+<td class="gt_row gt_center" headers="R₀ = 7  cov_60">~600</td>
+<td class="gt_row gt_center" headers="R₀ = 7  cov_100">~1,500</td>
+</tr>
+<tr class="gt_group_heading_row odd">
+<td colspan="4" id="R₀ = 8" class="gt_group_heading" data-quarto-table-cell-role="th" style="background-color: #0072B2; color: #FFFFFF; font-weight: bold" scope="colgroup">R₀ = 8</td>
+</tr>
+<tr class="gt_row_group_first even">
+<td class="gt_row gt_center" headers="R₀ = 8  VE">50%</td>
+<td class="gt_row gt_center" headers="R₀ = 8  cov_20">~18</td>
+<td class="gt_row gt_center" headers="R₀ = 8  cov_60">~20</td>
+<td class="gt_row gt_center" headers="R₀ = 8  cov_100">~22</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="R₀ = 8  VE">70%</td>
+<td class="gt_row gt_center" headers="R₀ = 8  cov_20">~40</td>
+<td class="gt_row gt_center" headers="R₀ = 8  cov_60">~50</td>
+<td class="gt_row gt_center" headers="R₀ = 8  cov_100">~80</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="R₀ = 8  VE">90%</td>
+<td class="gt_row gt_center" headers="R₀ = 8  cov_20">~300</td>
+<td class="gt_row gt_center" headers="R₀ = 8  cov_60">~450</td>
+<td class="gt_row gt_center" headers="R₀ = 8  cov_100">~1,000</td>
+</tr>
+</tbody><tfoot class="gt_sourcenotes">
+<tr class="odd">
+<td colspan="4" class="gt_sourcenote">Source: Data extracted from Zachreson et al.&nbsp;(2022), <em>Science Advances</em>, Figure 4.</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p><a href="#tbl-one" class="quarto-xref">Table&nbsp;1</a> reveals several critical insights about border quarantine during the Delta wave. The data demonstrates an exponential relationship between vaccine efficacy and outbreak protection. While 50% efficacy vaccines provided only modest improvements (extending outbreak timelines from 15 to 22-35 days), 90% efficacy vaccines created dramatic protection, extending the timeframe to 1,000-2,000 days at full population coverage.</p>
+<p>The most striking finding is the threshold effect observed with high-efficacy vaccines. At 90% efficacy, each increase in population coverage produces disproportionately larger gains in protection. For R₀ = 6, moving from 20% to 100% coverage extends the outbreak timeline from 450 to 2,000 days, a more than fourfold increase.</p>
+<p>The analysis also highlights that vaccination within quarantine systems alone was insufficient - high community vaccination rates were equally important. As noted in the research, “border quarantine systems cannot be used to compensate for low levels of community vaccination” [Zachreson et al.&nbsp;(2022)]. This finding had significant policy implications, suggesting that reopening borders safely required a dual approach: vaccinating both travelers and the general population.</p>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>The emergence of the Delta variant fundamentally changed the risk calculus for border quarantine systems. Where previously strict quarantine alone could prevent outbreaks, the variant’s increased transmissibility meant that vaccination became an essential component of border safety. The key findings from this analysis include:</p>
+<ol type="1">
+<li><p>Vaccine efficacy thresholds are critical: Low-efficacy vaccines (50%) provided minimal protection, while high-efficacy vaccines (90%) could extend outbreak protection by two orders of magnitude.</p></li>
+<li><p>Population coverage creates exponential benefits: The protective effect of high-efficacy vaccines increases dramatically with higher population vaccination rates, showing clear threshold behavior.</p></li>
+<li><p>Dual protection is essential: High vaccination rates both within quarantine systems and in the general population were necessary to prevent outbreaks effectively.</p></li>
+<li><p>Adaptive policies are required: Border measures must evolve with changing viral characteristics and vaccine effectiveness.</p></li>
+</ol>
+<p>As Zachreson et al.&nbsp;(2022) conclude, the experience with Delta demonstrates that pandemic border policies must be adaptive, responding to changes in viral characteristics and vaccine effectiveness. This research provides a framework for evaluating future variants and determining appropriate border measures based on their transmissibility and immune evasion capabilities.</p>
+</section>
+<section id="reference" class="level3">
+<h3 class="anchored" data-anchor-id="reference">Reference</h3>
+<p>Zachreson, C., Shearer, F. M., Price, D. J., Lydeamore, M. J., McVernon, J., McCaw, J., &amp; Geard, N. (2022). COVID-19 in low-tolerance border quarantine systems: Impact of the Delta variant of SARS-CoV-2. <em>Science Advances, 8</em>(15), eabm3624. <a href="https://doi.org/10.1126/sciadv.abm3624" class="uri">https://doi.org/10.1126/sciadv.abm3624</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
