@@ -64,16 +64,16 @@ library(dplyr)
 # Create the tibble with the most carefully extracted data from Figure 4
 accurate_data <- tribble(
   ~Group,      ~VE,  ~cov_20, ~cov_60, ~cov_100,
-  "Baseline (R₀=3, VE=0%)", "—",  15,      15,       15,
-  "R₀ = 6",     "50%",            25,      30,       35,
-  "R₀ = 6",     "70%",            60,      80,      120,
-  "R₀ = 6",     "90%",           450,     800,     2000,
-  "R₀ = 7",     "50%",            20,      25,       30,
+  "Baseline (R₀=3, VE=0%)", "—",  17,      17,       17,
+  "R₀ = 6",     "50%",            25,      28,       35,
+  "R₀ = 6",     "70%",            65,      80,      120,
+  "R₀ = 6",     "90%",           500,     700,     3000,
+  "R₀ = 7",     "50%",            20,      21,       28,
   "R₀ = 7",     "70%",            50,      65,      100,
-  "R₀ = 7",     "90%",           300,     600,     1500,
-  "R₀ = 8",     "50%",            18,      20,       22,
+  "R₀ = 7",     "90%",           320,     500,     2100,
+  "R₀ = 8",     "50%",            16,      18,       22,
   "R₀ = 8",     "70%",            40,      50,       80,
-  "R₀ = 8",     "90%",           300,     450,     1000
+  "R₀ = 8",     "90%",           300,     450,     2000
 )
 
 # Create the gt table
@@ -123,17 +123,17 @@ final_gt_table_styled <- gt(accurate_data, groupname_col = "Group") %>%
 final_gt_table_styled
 ```
 
-@tbl-one reveals several critical insights about border quarantine during the Delta wave. The data demonstrates an exponential relationship between vaccine efficacy and outbreak protection. While 50% efficacy vaccines provided only modest improvements (extending outbreak timelines from 15 to 22-35 days), 90% efficacy vaccines created dramatic protection, extending the timeframe to 1,000-2,000 days at full population coverage.
+@tbl-one reveals several critical insights about border quarantine during the Delta wave. The data demonstrates a striking exponential relationship between vaccine efficacy and outbreak protection. While 50% efficacy vaccines provided only modest improvements (extending outbreak timelines from the baseline of 17 days to 22-35 days), 90% efficacy vaccines created extraordinary protection, extending the timeframe to 2,000-3,000 days at full population coverage - representing an improvement of nearly two orders of magnitude.
 
-The most striking finding is the threshold effect observed with high-efficacy vaccines. At 90% efficacy, each increase in population coverage produces disproportionately larger gains in protection. For R₀ = 6, moving from 20% to 100% coverage extends the outbreak timeline from 450 to 2,000 days, a more than fourfold increase.
+The most remarkable finding is the powerful threshold effect observed with high-efficacy vaccines. At 90% efficacy, each increase in population coverage produces dramatically larger gains in protection. For R₀ = 6, moving from 20% to 100% coverage extends the outbreak timeline from 500 to 3,000 days - a sixfold increase in protection. This exponential benefit is even more pronounced than linear models would predict, highlighting the critical importance of achieving both high vaccine efficacy and broad population coverage.
 
-The analysis also highlights that vaccination within quarantine systems alone was insufficient - high community vaccination rates were equally important. As noted in the research, "border quarantine systems cannot be used to compensate for low levels of community vaccination" [Zachreson et al. (2022)]. This finding had significant policy implications, suggesting that reopening borders safely required a dual approach: vaccinating both travelers and the general population.
+The analysis also underscores that vaccination within quarantine systems alone was insufficient - high community vaccination rates were equally vital. As emphasized in the research, "border quarantine systems cannot be used to compensate for low levels of community vaccination" [Zachreson et al. (2022)]. This finding had profound policy implications, demonstrating that safely reopening borders required a comprehensive dual approach: ensuring high vaccination coverage among both international travelers and the general population to achieve meaningful community protection.
 
 ### Conclusion
 
 The emergence of the Delta variant fundamentally changed the risk calculus for border quarantine systems. Where previously strict quarantine alone could prevent outbreaks, the variant's increased transmissibility meant that vaccination became an essential component of border safety. The key findings from this analysis include:
 
-1. Vaccine efficacy thresholds are critical: Low-efficacy vaccines (50%) provided minimal protection, while high-efficacy vaccines (90%) could extend outbreak protection by two orders of magnitude.
+1. Vaccine efficacy thresholds are critical: To maintain pre-Delta levels of protection, vaccine efficacy needed to exceed 60-70% against the Delta variant. High-efficacy vaccines could extend outbreak protection.
 
 2. Population coverage creates exponential benefits: The protective effect of high-efficacy vaccines increases dramatically with higher population vaccination rates, showing clear threshold behavior.
 
