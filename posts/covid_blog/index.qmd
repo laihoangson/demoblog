@@ -24,7 +24,7 @@ knitr::include_graphics("airport.jpg")
 
 When COVID-19 emerged, countries like Australia, New Zealand, and China implemented strict border quarantine systems to prevent local outbreaks. These systems required international travelers to undergo 14-day quarantine periods with regular testing. However, the emergence of the Delta variant in 2021 posed new challenges - it was significantly more transmissible and partially evaded vaccine-induced immunity. This raised critical questions: 
 
-> *Could existing quarantine systems containing this more dangerous variant? How effective were vaccines at preventing outbreaks when breakthrough infections occurred?*
+> *Could existing quarantine systems handle this more dangerous variant? How effective were vaccines at preventing outbreaks when breakthrough infections occurred?*
 
 This blog post explores how border quarantine performance changed under Delta variant conditions and what level of vaccination was needed to maintain safety.
 
@@ -137,7 +137,7 @@ final_gt_table_styled
 
 The most remarkable finding is the powerful threshold effect observed with high-efficacy vaccines. At 90% efficacy, each increase in population coverage produces dramatically larger gains in protection. For R₀ = 6, moving from 20% to 100% coverage extends the outbreak timeline from 500 to 3,000 days - a sixfold increase in protection. This exponential benefit is even more pronounced than linear models would predict, highlighting the critical importance of achieving both high vaccine efficacy and broad population coverage.
 
-The analysis also underscores that vaccination within quarantine systems alone was insufficient - high community vaccination rates were equally vital. As emphasized in the research, "border quarantine systems cannot be used to compensate for low levels of community vaccination" [Zachreson et al. (2022)]. This finding had profound policy implications, demonstrating that safely reopening borders required a comprehensive dual approach: ensuring high vaccination coverage among both international travelers and the general population to achieve meaningful community protection.
+The analysis also underscores that vaccination within quarantine systems alone was insufficient - high community vaccination rates were equally vital. As emphasized in the research, "border quarantine systems cannot be used to compensate for low levels of community vaccination" (Zachreson et al., 2022). This finding had profound policy implications, demonstrating that safely reopening borders required a comprehensive dual approach: ensuring high vaccination coverage among both international travelers and the general population to achieve meaningful community protection.
 
 ## Conclusion
 
