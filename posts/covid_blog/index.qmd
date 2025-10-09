@@ -13,11 +13,19 @@ format:
 #| echo: false
 #| warning: false
 #| message: false
+# Load libraries
+library(knitr)
+library(gt)
+library(tibble)
+library(dplyr)
+```
 
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
 #| out-width: "100%"
 #| out-height: "auto"
-
-library(knitr)
 
 knitr::include_graphics("airport.jpg")
 ```
@@ -49,8 +57,6 @@ The heatmap below shows how the relative risk of quarantine breaches changes wit
 #| out-width: "100%"
 #| out-height: "auto"
 
-library(knitr)
-
 knitr::include_graphics("figure.jpg")
 ```
 
@@ -66,10 +72,6 @@ Based on Figure 4 from the research by Zachreson et al. (2022), the table below 
 #| message: false
 #| label: tbl-one
 #| tbl-cap: "Community Outbreak Risk from Quarantine Breaches. Estimated time until the probability of a community outbreak (≥5 cases) reaches 50%"
-
-library(gt)
-library(tibble)
-library(dplyr)
 
 # Create the tibble with the most carefully extracted data from Figure 4
 accurate_data <- tribble(

@@ -3,28 +3,32 @@ project:
   output-dir: docs
 
 website:
-  title: "Hoang Son's Data Blog"
+  title: "Hoang Son's Data World"
   navbar:
     left:
       - href: index.qmd
         text: Home
+        icon: house-fill
       - href: about.qmd
         text: About
+        icon: person-fill
       - href: posts.qmd
         text: Blog
+        icon: book-fill
     right:
       - icon: github
+        text: GitHub
         href: https://github.com/laihoangson
       - icon: linkedin
+        text: LinkedIn
         href: https://linkedin.com/in/hoang-son-lai-92ab19282
-      - icon: envelope
-        href: mailto:hlai0022@student.monash.edu
   page-footer:
     center: "© 2025 Hoang Son Lai - Built with Quarto"
 format:
   html:
     theme: flatly
     css: styles.css
+
 
 
 

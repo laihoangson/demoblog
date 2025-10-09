@@ -3,18 +3,19 @@ title: "Hoang Son Lai"
 image: profile.jpg
 about:
   template: trestles
+  image-shape: round
   links:
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com/in/hoang-son-lai-92ab19282
     - icon: github
       text: GitHub
       href: https://github.com/laihoangson
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/hoang-son-lai-92ab19282
 ---
 
 ### About Me
 
-I am Hoang Son Lai, a motivated individual with a strong academic background in finance and ongoing postgraduate studies in Business Analytics at Monash University. I am dedicated to continuous learning and growth, striving every day to strengthen both my technical and professional capabilities. My experiences in finance, insurance, and audit have provided me with practical insights and a deep appreciation for the value of data-driven decision-making. I aim to continue building on these experiences by applying my skills with curiosity, adaptability, and a commitment to making a meaningful contribution.
+I am Hoang Son Lai, a motivated individual with an academic background in finance and ongoing postgraduate studies in Business Analytics at Monash University. I am dedicated to continuous learning and growth, striving every day to strengthen both my technical and professional capabilities. My experiences in finance, insurance, and audit have provided me with practical insights and a deep appreciation for the value of data-driven decision-making. I aim to continue building on these experiences by applying my skills with curiosity, adaptability, and a commitment to making a meaningful contribution.
 
 ---
 
