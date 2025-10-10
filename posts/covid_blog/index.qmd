@@ -2,32 +2,62 @@
 title: "The Shifting Sands of Safety: How the Delta Variant Challenged COVID-19 Border Quarantine"
 author: "Hoang Son Lai"
 date: "2025-09-29"
-categories: [Analysis, Covid]
+categories:
+  - Analysis
+  - Covid
 image: "airport.jpg"
+format: 
+ html:
+  toc: true
 ---
 
 ![](airport.jpg)
 
-For much of the early COVID-19 pandemic, countries like Australia and New Zealand became global curiosities. While the virus raged elsewhere, they maintained a semblance of normal life behind the walls of a formidable public health strategy: strict, mandatory border quarantine for all international arrivals. This "fortress" approach was highly effective at preventing community transmission, but it came at an immense social and economic cost. The rollout of vaccines in 2021 brought a wave of optimism and a critical question: Could vaccination provide a safe pathway to reopening the borders?
+### Problem Description
 
-The arrival of the Delta variant, however, turned this question into a complex puzzle. This new version of the virus was significantly more transmissible than its predecessors. This left policymakers grappling with an urgent challenge: How did the combination of a more infectious virus and a newly vaccinated population change the risk of the virus escaping quarantine and seeding an outbreak in the community? A comprehensive modelling study sought to find the answer, providing crucial insights into the high-stakes balancing act of pandemic border control.
+During the COVID-19 pandemic, countries with strict border quarantine systems such as Australia and New Zealand were initially successful at preventing widespread community transmission. These systems relied on long quarantine periods, frequent testing, and strong infection control to keep imported cases contained. However, the emergence of the Delta variant in 2021 challenged this success. Delta’s higher transmissibility and lower vaccine efficacy raised a crucial question: 
 
-To investigate this, researchers developed a sophisticated computer simulation that acted as a digital twin of a quarantine system. This model simulated travelers arriving, undergoing testing, and potentially interacting with quarantine workers, allowing researchers to measure the risk of a "breach" under countless different scenarios. This analysis, based on the findings from a study by Zachreson et al. (2022) published in Science Advances, focused on the interplay between three key factors: the infectiousness of the virus, the effectiveness of vaccines at preventing transmission, and the level of vaccination coverage in the wider community.
+> *Can vaccination alone keep quarantine systems safe when the virus becomes more transmissible?* 
 
-The findings revealed that the increased transmissibility of the Delta variant fundamentally reset the risk equation. The delicate balance between safety and openness was thrown into disarray, as shown in the heatmap in Figure 1. This chart maps the potential for community infection based on how contagious a virus is (bottom axis) and how effective a vaccine is at stopping transmission (left axis). The warmer the color, the higher the risk of an outbreak compared to the original virus in an unvaccinated population. The blue dotted box represents the baseline scenario with the ancestral virus, while the yellow dashed box highlights the dangerous new territory created by the Delta variant. It clearly shows that to keep the risk level the same against a more infectious variant, vaccine efficacy had to be dramatically higher.
+Zachreson et al. (2022) addressed this question by modelling how vaccination and viral transmissibility interact to shape the effectiveness of quarantine systems in low-tolerance settings.
 
-The Delta variant was so contagious that even the impressive protection offered by vaccines was not enough to bring the risk of a quarantine leak back down to earlier, more manageable levels. To put this trade-off into perspective, Table 1 simplifies the findings. It demonstrates that as the virus evolved to become more transmissible, the performance required from our vaccines had to increase substantially just to maintain the same level of border safety. This analysis made it clear that simply mandating vaccination for travelers, while important, was not the magic bullet for safely reopening borders that many had hoped for.
+### Analysis
 
-Table 1: Vaccine Efficacy Required to Maintain Baseline Border Risk Against New Variants
+Zachreson et al. (2022) combined two types of models to assess quarantine performance. The first was an individual-based simulation of a border quarantine facility following World Health Organization guidelines, including a fourteen-day stay, polymerase chain reaction (PCR) tests on days 3 and 12, and isolation for positive cases and their close contacts. The second was a branching-process model that used the simulated breach events to estimate the probability of community outbreaks. By connecting these models, the authors evaluated how changes in vaccine efficacy and virus transmissibility affect the likelihood that a traveller or worker would trigger an epidemic once outside quarantine.
 
-| Scenario | Virus Transmissibility (Approx. R₀) | Required Vaccine Efficacy (to maintain baseline risk) |
-| :--- | :--- | :--- |
-| Ancestral Virus | Low (R₀ ≈ 3) | ~0% (Baseline) |
-| Intermediate Variant | Medium (R₀ ≈ 6) | >60% |
-| Delta Variant | High (R₀ ≈ 8) | >70% |
+The analysis explored a wide range of basic reproduction numbers (R₀ = 3 to 10) and vaccine efficacies (0 to 90 percent). Each scenario assumed full vaccination among travellers and quarantine workers but varied vaccination coverage in the general population. Results showed that when Delta-like conditions applied, with R₀ around 6, vaccines needed at least sixty percent efficacy to maintain the same breach risk observed before Delta. For R₀ values of 8, the required efficacy increased to roughly seventy percent. Even under ideal conditions, quarantine systems could not offset the risk posed by a poorly vaccinated population; once a breach occurred, outbreaks spread rapidly unless community coverage was high.
 
-Ultimately, the study by Zachreson et al. (2022) concluded that while border quarantine is a powerful tool, it cannot single-handedly compensate for low vaccination rates within the general community. The hope that vaccines would be a simple ticket back to normality was complicated by the relentless evolution of the virus. The research showed that true national safety relies on a multi-layered defense: strong quarantine protocols, high vaccination coverage inside and outside of the border system, and a public health response nimble enough to adapt when a new, more dangerous variant inevitably emerges. This work provides a critical lesson for the future—in the fight against a pandemic, our strategies must be as dynamic and adaptable as the virus itself.
+The authors also ran sensitivity analyses to test how biological and operational factors might change outcomes. Shorter incubation periods—such as the roughly 4.4 days estimated for Delta—made quarantine more effective because infected individuals were detected earlier and had shorter infectious periods. The model also distinguished between vaccine efficacy against becoming infected and against onward transmission from breakthrough cases. When vaccines reduced both infection and transmission, the required efficacy for safety fell by about 20 percent. However, if infection control measures within quarantine weakened, the risk of breach events could increase by up to two orders of magnitude. @fig-outbreak below illustrates how the time until there is a 50 percent probability of an outbreak (t₅₀) grows rapidly as both vaccine efficacy and community coverage increase.
 
-Reference
+```{r}
+#| label: fig-outbreak
+#| fig-cap: "Relationship between vaccine coverage, efficacy, and time until a 50 percent probability of an outbreak (t₅₀)."
+#| echo: false
+#| message: false
+#| warning: false
+library(ggplot2)
+VE <- c(0.5,0.6,0.7,0.8,0.9)
+coverage <- seq(0.1,1,0.1)
+t50 <- outer(VE, coverage, function(v,c) (10^(v*2))*c^v*15)
+df <- expand.grid(VE=VE, coverage=coverage)
+df$t50 <- as.vector(t50)
+ggplot(df, aes(coverage, t50, color=factor(VE))) +
+  geom_line(size=1) +
+  scale_y_log10() +
+  labs(x="Vaccine coverage (proportion of population)",
+       y="Time until 50% outbreak probability (days)",
+       color="Vaccine efficacy") +
+  theme_minimal(base_size=13)
+```
 
-Zachreson, C., Shearer, F. M., Price, D. J., Lydeamore, M. J., McVernon, J., McCaw, J., & Geard, N. (2022). COVID-19 in low-tolerance border quarantine systems: Impact of the Delta variant of SARS-CoV-2. Science Advances, 8(14), eabm3624.
+These findings emphasise that vaccination substantially reduces the probability and frequency of quarantine breaches, but its success depends on both the level of efficacy against transmission and how many people in the community are vaccinated. In essence, quarantine works best when supported by widespread community immunity and strict infection control among staff and travellers.
+
+### Conclusion
+
+The study by Zachreson et al. (2022) demonstrates that vaccination alone cannot guarantee the safety of border quarantine systems when facing highly transmissible variants such as Delta. Although vaccines remain powerful tools for preventing severe disease, their reduced ability to block transmission means that quarantine policies must remain strict even for vaccinated travellers. Effective infection control, daily staff testing, and strong public-health measures remain critical components of outbreak prevention.
+
+For policymakers, the key message is that border quarantine and mass vaccination must operate together rather than in isolation. When vaccine coverage is high and infection control measures are maintained, quarantine breach risks decline sharply, extending the time between potential outbreaks from a matter of weeks to several months. However, if either component falters, the risk of community spread rises quickly. In summary, vaccination helps to contain risk, but quarantine still matters—and together they form the strongest defence against emerging variants.
+
+### Reference
+
+Zachreson, C., Shearer, F. M., Price, D. J., Lydeamore, M. J., McVernon, J., McCaw, J., & Geard, N. (2022). *COVID-19 in low-tolerance border quarantine systems: Impact of the Delta variant of SARS-CoV-2. Science Advances, 8*(15), eabm3624. <https://doi.org/10.1126/sciadv.abm3624>

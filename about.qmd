@@ -14,11 +14,11 @@ about:
 
 ### About Me
 
-As a young professional early in my career, I understand there is still much to learn - and I am fully committed to that journey. With a strong academic foundation in finance and current postgraduate study in Business Analytics at Monash University, I am working hard every day to develop both my technical and professional skills. I have gained valuable hands-on experience in finance, insurance, and data analysis, and I am eager to keep improving through real-world challenges. I may be at the beginning, but I bring energy, adaptability, and a serious willingness to grow into every opportunity.
+I am Hoang Son Lai, a motivated individual with a strong academic background in finance and ongoing postgraduate studies in Business Analytics at Monash University. I am dedicated to continuous learning and growth, striving every day to strengthen both my technical and professional capabilities. My experiences in finance, insurance, and audit have provided me with practical insights and a deep appreciation for the value of data-driven decision-making. I aim to continue building on these experiences by applying my skills with curiosity, adaptability, and a commitment to making a meaningful contribution.
 
 ---
 
-## Education
+### Education
 
 **Monash University**  
 
@@ -34,7 +34,7 @@ Hanoi, Viet Nam | Sep 2020 - Aug 2024
 
 ---
 
-## Experience
+### Experience
 
 **Bao Viet Insurance Company**  
 
@@ -54,3 +54,45 @@ Hanoi, Viet Nam | May 2024 - Sep 2024
 
 Hanoi, Viet Nam | Jul 2023 - Aug 2023
 
+```{=html}
+<style>
+  /* BƯỚC 1: Tô màu nền xanh cho CẢ HAI CỘT một cách riêng biệt */
+  .quarto-about-trestles .about-left,
+  .quarto-about-trestles .about-contents {
+    background-color: #eaf2ff !important; /* Nền xanh nhạt */
+  }
+  
+  /* BƯỚC 2: Tạo hiệu ứng thẻ thống nhất bằng cách bo góc khối cha */
+  .quarto-about-trestles .about-entity {
+    border-radius: 25px !important;
+    overflow: hidden; /* Cắt các góc nhọn của 2 cột con bên trong */
+    padding: 0 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08) !important;
+  }
+  
+  /* BƯỚC 3: Thêm lại đệm cho 2 cột con bên trong */
+  .quarto-about-trestles .about-left > .about-image,
+  .quarto-about-trestles .about-left > .about-name,
+  .quarto-about-trestles .about-left > .about-links,
+  .quarto-about-trestles .about-contents {
+      padding: 2.5rem !important;
+  }
+
+  /* BƯỚC 4: Biến ảnh đại diện thành hình tròn */
+  .quarto-about-trestles .about-image img {
+    border-radius: 50% !important;
+    width: 220px !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    border: 6px solid white !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1) !important;
+  }
+
+  /* BƯỚC 5: Đổi màu tất cả các tiêu đề sang màu xanh */
+  .quarto-about-trestles .about-name,
+  .quarto-about-trestles .about-contents h3,
+  .quarto-about-trestles .about-contents h2 {
+    color: #0056b3 !important;
+  }
+</style>
+```

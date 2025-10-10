@@ -1,4 +1,4 @@
-/* --- Hero Banner Styling for the Home Page --- */
+/* Hero Banner Styling for the Home Page */
 
 /* Reset all margin and padding */
 html, body {
@@ -49,8 +49,8 @@ body.page-index .page-header {
 
   /* Background image settings */
   background-image: url('background.jpg');
-  height: 100vh; /* 100% of the viewport height */
-  width: 100vw; /* 100% of the viewport width */
+  height: 100vh;
+  width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -138,3 +138,31 @@ body.page-index .page-header {
 body.page-listing h1.title {
   display: none;
 }
+
+/*
+  STYLING FOR ABOUT PAGE (trestles template)
+*/
+
+/* Create the blue background card for the parent container. */
+.quarto-about-trestles .about-entity {
+  background-color: #eaf2ff !important;
+  /* border-radius: 25px !important; <-- REMOVED */
+  padding: 2.5rem !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08) !important;
+}
+
+/*Make the background of the child columns transparent
+  to reveal the blue background of the parent.*/
+.quarto-about-trestles .about-left,
+.quarto-about-trestles .about-contents {
+  background: none !important;
+  border: none !important;
+}
+
+/* Turn the subheadings blue. */
+.quarto-about-trestles .about-contents h2,
+.quarto-about-trestles .about-contents h3 {
+  color: #0056b3 !important;
+}
+
+
